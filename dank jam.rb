@@ -1,3 +1,5 @@
+songs = "Users/Slastro/Documents/Songs"
+
 in_thread do
   loop do
     sample :drum_heavy_kick
@@ -28,8 +30,13 @@ in_thread(name: :drums) do
   end
 end
 
+live_loop :bad do
+  sample songs, "badtothebone.wav", start: 0.0000, finish: 0.02, amp: 1
+  sleep 8
+end
+
 loop do
   use_synth :zawa
-  play 52, attack: 0.7, release: 2.5, phase: 2, amp: 0.1
+  play 52, attack: 0.7, release: 2.5, amp: 0.02
   sleep 2
 end

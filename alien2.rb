@@ -30,8 +30,8 @@ use_cue_logging false
 
 
 live_loop :water do
-  sample "/Users/Slastro/Documents/Sounds/5. 339324__inspectorj__stream-water-c.wav", start: 0.1, finish: 0.15, amp: 1.2, pitch: 0.5
-  sleep 5
+  sample samps, "slap.wav", start: 0.00, finish: 1, amp: 0.4, pan: 0.3, pitch: 1
+  sleep [0.1, 0.2, 0.3, 0.4, 0.5, 0.7].choose
 end
 
 live_loop :geetar do
